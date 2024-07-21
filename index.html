@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disney Character Explorer</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container text-center">
+        <h1 class="my-4">Disney Character Explorer</h1>
+        <!-- search bar -->
+        <div class="search-bar mb-4">
+            <input type="text" id="character-search" class="form-control" placeholder="search for a disney character">
+            <button id="search-button" class="btn btn-primary mt-2">Search</button>
+        </div>
+        <!-- filter bar -->
+        <div class="filter-bar mb-4">
+            <select id="filter-select" class="form-control">
+                <option value="">filter by movie or tv show</option>
+            </select>
+            <button id="filter-button" class="btn btn-secondary mt-2">filter</button>
+        </div>
+        <!-- error message display -->
+        <div id="error-message" class="text-danger"></div>
+        <!-- character list -->
+        <div id="character-list" class="row"></div>
+    </div>
+
+    <!-- character details modal -->
+    <div id="character-details-modal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Character details</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div id="character-details"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
